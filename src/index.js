@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import configStore from './store'
 
 import 'milligram/dist/milligram.min.css'
 
@@ -18,4 +20,11 @@ const Test = () => (
 let root = document.createElement('div')
 document.body.appendChild(root)
 
-ReactDOM.render(<Test/>, root)
+const store = configStore()
+
+ReactDOM.render(
+  <Provider store={store}>
+    <Test/>
+  </Provider>
+  , root
+)
