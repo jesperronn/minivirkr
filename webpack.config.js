@@ -5,6 +5,7 @@ module.exports = {
   devServer: {
     port: 9000
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -15,6 +16,10 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.svg$/,
+        use: 'url-loader'
       }
     ]
   },

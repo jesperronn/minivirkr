@@ -1,16 +1,40 @@
 import React from 'react'
 
-const SearchBar = () => (
-  <div className='row'>
-    <div className='column'>
+export default class SearchBar extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {term: ''}
 
-      <form action='#'>
-        <input type='text' placeholder='Indtast CVR nummer'/>
-        <input className='button-primary' type='submit' value='Søg'/>
-      </form>
+    this.update = this.update.bind(this)
+    this.formSubmit = this.formSubmit.bind(this)
+  }
 
-    </div>
-  </div>
-)
+  formSubmit(event) {
+    //
+    event.preventDefault()
+    // send result upstream
+    this.props.submit(this.state.term)
+  }
 
-export default SearchBar
+  update(event) {
+    this.setState({term: event.target.value})
+  }
+
+  render() {
+    return (
+      <div className='container'>
+        <form className='form-inline' onSubmit={this.formSubmit}>
+          <input
+            type='text'
+            className='form-control'
+            placeholder='Søgeord'
+            value={this.state.cvrnr}
+            onChange={this.update}
+          />
+          <input className='btn btn-primary' type='submit' value='Søg' />
+        </form>
+      </div>
+    )
+  }
+
+}

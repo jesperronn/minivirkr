@@ -1,30 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
-import configStore from './store'
+import 'bootswatch/dist/cosmo/bootstrap.min.css'
+import MiniVirkr from './app'
 
-import 'milligram/dist/milligram.min.css'
-
-import Header from './components/Header'
-import SearchBar from './components/SearchBar'
-import Result from './components/Result'
-
-const Test = () => (
-  <div className='container'>
-    <Header/>
-    <SearchBar/>
-    <Result/>
-  </div>
-)
-
+// Create somewhere to hang React
 let root = document.createElement('div')
 document.body.appendChild(root)
 
-const store = configStore()
-
-ReactDOM.render(
-  <Provider store={store}>
-    <Test/>
-  </Provider>
-  , root
-)
+ReactDOM.render(<MiniVirkr/>, root)
