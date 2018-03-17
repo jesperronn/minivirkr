@@ -1,6 +1,9 @@
 import React from 'react'
 import _ from 'lodash'
 
+import Virksomheder from './Virksomheder'
+import Personer from './Personer'
+
 export default class Result extends React.Component {
   constructor(props) {
     super(props)
@@ -15,37 +18,11 @@ export default class Result extends React.Component {
     const {virksomheder, deltagere} = this.props.resultat
 
     return (
-      <div>
-        {this.renderVirksomheder(virksomheder)}
-        {this.renderDeltagere(deltagere)}
+      <div className='container'>
+        <Personer data={deltagere}/>
+        <Virksomheder data={virksomheder}/>
       </div>
     )
   }
-
-  renderVirksomheder(virksomheder) {
-    if (virksomheder.length == 0) {
-      return <h2>Ingen virksomhder</h2>
-    }
-
-    return (
-      <h2>{virksomheder.length} virksomheder</h2>
-    )
-
-
-  }
-
-  renderDeltagere(deltagere) {
-    if (deltagere.length == 0) {
-      return <h2>Ingen deltagere</h2>
-    }
-
-    return (
-      <h2>{deltagere.length} deltagere</h2>
-    )
-  }
-
-
-
-
 
 }
