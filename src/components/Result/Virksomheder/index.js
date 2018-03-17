@@ -4,7 +4,7 @@ import _ from 'lodash'
 const Virksomheder = (props) => {
   if (_.isEmpty(props.data)) {
     return (
-      <h2>Ingen virksomheder fundet</h2>
+      <h4>Ingen virksomheder fundet</h4>
     )
   }
 
@@ -20,9 +20,9 @@ const Virksomheder = (props) => {
 
   return (
     <div>
-      <h2>Virksomheder</h2>
+      <h4>Virksomheder</h4>
       <table className='table table-striped table-sm'>
-        <thead>
+        <thead className='thead-dark'>
           <tr>
             <th>CVR nr.</th>
             <th>Navn</th>

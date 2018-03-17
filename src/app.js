@@ -32,8 +32,10 @@ export default class MiniVirkr extends React.Component {
     return (
       <div>
         <Header />
-        <SearchBar submit={this.searchCvr}/>
-        <Result resultat={this.state.resultat}/>
+        <div className='container'>
+          <SearchBar submit={this.searchCvr}/>
+          <Result resultat={this.state.resultat}/>
+        </div>
       </div>
     )
   }

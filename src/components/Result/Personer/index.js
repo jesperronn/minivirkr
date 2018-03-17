@@ -4,24 +4,22 @@ import _ from 'lodash'
 const Personer = (props) => {
   if (_.isEmpty(props.data)) {
     return (
-      <h2>Ingen personer fundet</h2>
+      <h4>Ingen personer fundet</h4>
     )
   }
 
   const rows = props.data.map((person) => {
-    return (
-      <tr key={person.enhedsNummer}>
-        <td>{person.navn}</td>
-        <td>{person.adresselinie}, {person.bylinie}</td>
-      </tr>
-    )
+    return (<tr key={person.enhedsNummer}>
+      <td>{person.navn}</td>
+      <td>{person.adresselinie}, {person.bylinie}</td>
+    </tr>)
   })
 
   return (
     <div>
-      <h2>Personer</h2>
+      <h4>Personer</h4>
       <table className='table  table-striped table-sm'>
-        <thead>
+        <thead className='thead-dark'>
           <tr>
             <th>Navn</th>
             <th>Adresse</th>

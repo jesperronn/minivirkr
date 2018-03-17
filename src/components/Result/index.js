@@ -18,9 +18,18 @@ export default class Result extends React.Component {
     const {virksomheder, deltagere} = this.props.resultat
 
     return (
-      <div className='container'>
-        <Personer data={deltagere}/>
-        <Virksomheder data={virksomheder}/>
+      <div>
+        <br/>
+        <div className='row'>
+          <div className='col-md-12'>
+            <Personer data={deltagere}/>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-md-12'>
+            <Virksomheder data={virksomheder}/>
+          </div>
+        </div>
       </div>
     )
   }
