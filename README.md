@@ -1,6 +1,6 @@
 # Mini Virkr
 
-A miniature version of Virkr (<www.virkr.dk>) build for demonstration purposes
+A miniature version of Virkr (www.virkr.dk) build for demonstration purposes
 
 ## Highlights
 * React
