@@ -3,6 +3,7 @@ import React from 'react'
 import Header from './components/Header'
 import SearchBar from './components/SearchBar'
 import Result from './components/Result'
+import Error from './components/Error'
 
 import API from './API'
 
@@ -22,16 +23,16 @@ export default class MiniVirkr extends React.Component {
   }
 
   searchCvr(term) {
-    API.searchCvr(term)
-    .then(
-      (resultat) => this.setState({resultat: resultat, fejl: {}})),
-      (fejl) => this.setState(resultat: {}, fejl: {})
+    API(term)
+    .then(resultat => this.setState({resultat: resultat, fejl: {}}))
+    .catch(err => this.setState(resultat: {}, fejl: err))
   }
 
   render() {
     return (
       <div>
         <Header />
+        <Error error={this.state.fejl}/>
         <div className='container'>
           <SearchBar submit={this.searchCvr}/>
           <Result resultat={this.state.resultat}/>
