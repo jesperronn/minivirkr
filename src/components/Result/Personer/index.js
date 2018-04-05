@@ -1,14 +1,14 @@
 import React from 'react'
 import _ from 'lodash'
 
-const Personer = (props) => {
-  if (_.isEmpty(props.data)) {
+const Personer = ({data}) => {
+  if (_.isEmpty(data)) {
     return (
       <h4>Ingen personer fundet</h4>
     )
   }
 
-  const rows = props.data.map((person) => {
+  const rows = data.map((person) => {
     return (<tr key={person.enhedsNummer}>
       <td>{person.navn}</td>
       <td>{person.adresselinie}, {person.bylinie}</td>
