@@ -12,6 +12,24 @@ A miniature version of Virkr (www.virkr.dk) build for demonstration purposes
 * ES2017 _async/await_
 * Deploy to nginx using Docker and multistage build
 
+## Prerequisites
+
+In order to be able to build and run Mini Virkr, you will need to have Node.js and NPM/Yarn installed.
+
+If you are using a mac this is installed using Homebrew, altenately follow the guide on https://nodejs.org/en/download/
+
+If you don't have Homebrew installed on mac, use this guide to install it : https://brew.sh
+
+Also if you don't have mac developer tools installed make sure to install xcode.
+
+### Install node and npm with Homebrew
+
+    brew install node
+
+### Editor
+
+A lot of editors will be able to handle a javascript project, but especially : VSCode, Atom and Intellij are good options, use the one you prefer
+
 ## How to run
 
 ### Starting local server using _webpack_dev_server_ on http://localhost:9000
