@@ -26,6 +26,14 @@ Also if you don't have mac developer tools installed make sure to install xcode.
 
     brew install node
 
+### Install Yarn
+
+    brew install yarn
+
+### Install create-react-app
+
+    yarn global add create-react-app
+
 ### Editor
 
 A lot of editors will be able to handle a javascript project, but especially : VSCode, Atom and Intellij are good options, use the one you prefer
