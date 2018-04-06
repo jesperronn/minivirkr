@@ -23,11 +23,9 @@ If you don't have Homebrew installed on mac, use this guide to install it : http
 Also if you don't have mac developer tools installed make sure to install xcode.
 
 ### Install node and npm with Homebrew
-
     brew install node
 
 ### Install Yarn
-
     brew install yarn
 
 ### Install create-react-app
@@ -39,6 +37,9 @@ Also if you don't have mac developer tools installed make sure to install xcode.
 A lot of editors will be able to handle a javascript project, but especially : VSCode, Atom and Intellij are good options, use the one you prefer
 
 ## How to run
+
+### Building
+    yarn
 
 ### Starting local server using _webpack_dev_server_ on http://localhost:9000
     yarn start
