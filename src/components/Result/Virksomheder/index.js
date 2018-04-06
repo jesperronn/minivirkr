@@ -1,14 +1,14 @@
 import React from 'react'
 import _ from 'lodash'
 
-const Virksomheder = (props) => {
-  if (_.isEmpty(props.data)) {
+const Virksomheder = ({data}) => {
+  if (_.isEmpty(data)) {
     return (
       <h4>Ingen virksomheder fundet</h4>
     )
   }
 
-  const rows = props.data.map((virksomhed) => {
+  const rows = data.map((virksomhed) => {
     return (
       <tr key={virksomhed.cvrnr}>
         <td>{virksomhed.cvrnr}</td>

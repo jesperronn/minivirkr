@@ -10,12 +10,14 @@ export default class Result extends React.Component {
   }
 
   render() {
+    const {resultat} = this.props
+
     // Nothing to show yet
-    if (_.isEmpty(this.props.resultat)) {
+    if (_.isEmpty(resultat)) {
       return null
     }
 
-    const {virksomheder, deltagere} = this.props.resultat
+    const {virksomheder, deltagere} = resultat
 
     return (
       <div>
