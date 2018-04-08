@@ -67,10 +67,10 @@ Here are instructions for running Mini Virkr locally. All commands are executed 
 
 This will fetch all project dependencies and install them in the project `node_modules` folder
 
-### Starting local server using _webpack_dev_server_ on http://localhost:9000
+### Starting local server using _webpack_dev_server_
     yarn start
 
-This starts a small webserver on port 9000. It automatically refreshes the browser when you make changes in the source code.
+This starts a small webserver on http://localhost:9000. It automatically refreshes the browser when you make changes in the source code.
 
 ### Development build
     yarn run devbuild
