@@ -5,7 +5,7 @@ import SearchBar from './components/SearchBar'
 import Result from './components/Result'
 import Error from './components/Error'
 
-import API from './API'
+import {searchVirkr} from './API'
 
 /**
  * The main application component
@@ -23,7 +23,7 @@ export default class MiniVirkr extends React.Component {
   }
 
   searchCvr(term) {
-    API(term)
+    searchVirkr(term)
     .then(resultat => this.setState({resultat: resultat, fejl: {}}))
     .catch(err => this.setState({resultat: {}, fejl: err}))
   }
