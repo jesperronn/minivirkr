@@ -46,19 +46,20 @@ export default class Result extends React.Component {
     const {virksomheder, deltagere} = resultat
 
     return (
-      <div>
-        <br/>
-        <div className='row'>
-          <div className='col-md-12'>
-            <Personer data={deltagere}/>
+      <section>
+          <div className='columns'>
+            <div className='column'>
+              <Personer data={deltagere}/>
+            </div>
           </div>
-        </div>
-        <div className='row'>
-          <div className='col-md-12'>
+
+        <div className='columns'>
+          <div className='column'>
             <Virksomheder data={virksomheder} vaelgCvrNr={this.vaelgCvrNr}/>
           </div>
         </div>
-      </div>
+
+      </section>
     )
   }
 

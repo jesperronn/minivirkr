@@ -17,9 +17,9 @@ const Personer = ({data}) => {
 
   return (
     <div>
-      <h4>Personer</h4>
-      <table className='table  table-striped table-sm'>
-        <thead className='thead-dark'>
+      <h4 className='title'>Personer</h4>
+      <table className='table is-narrow is-fullwidth'>
+        <thead>
           <tr>
             <th>Navn</th>
             <th>Adresse</th>

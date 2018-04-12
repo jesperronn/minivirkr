@@ -32,7 +32,7 @@ export default class MiniVirkr extends React.Component {
     return (
       <div>
         <Header />
-        <div className='container'>
+        <div className='container is-fluid'>
           <SearchBar submit={this.searchCvr}/>
           <Result resultat={this.state.resultat}/>
           <Error error={this.state.fejl}/>

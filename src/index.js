@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import 'bootswatch/dist/superhero/bootstrap.min.css'
+import 'bulmaswatch/lumen/bulmaswatch.min.css'
 import MiniVirkr from './app'
 
 // Create somewhere to hang React

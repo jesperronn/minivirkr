@@ -5,7 +5,7 @@ A miniature version of Virkr (www.virkr.dk) build for demonstration purposes
 ## Highlights
 * React
 * Simple state management
-* Twitter Bootstrap (Bootswatch _Superhero_ theme)
+* Bulma CSS (Bulmaswatch _lumen_ theme)
 * Webpack 4
 * Babel
 * Yarn

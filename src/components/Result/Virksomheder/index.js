@@ -29,9 +29,9 @@ export default class Virksomheder extends React.Component {
     })
 
     return (<div>
-      <h4>Virksomheder</h4>
-      <table className='table table-striped table-sm'>
-        <thead className='thead-dark'>
+      <h4 className='title'>Virksomheder</h4>
+      <table className='table is-narrow is-fullwidth'>
+        <thead>
           <tr>
             <th>CVR nr.</th>
             <th>Navn</th>

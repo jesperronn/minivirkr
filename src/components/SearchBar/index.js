@@ -23,19 +23,20 @@ export default class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className="row">
-        <div className="col-md-12">
+      <div className='columns'>
+        <div className='column'>
           <form onSubmit={this.formSubmit}>
-            <div className="input-group">
-              <input type='text' className='form-control' placeholder='Personnavn, virksomhedsnavn eller CVR nummer' value={this.state.cvrnr} onChange={this.update}/>
-              <span className="input-group-btn">
-                <input className='btn btn-primary' type='submit' value='Søg'/>
-              </span>
+            <div className='field has-addons'>
+              <p className='control is-expanded'>
+                <input className='input' type="text" placeholder='Personnavn, virksomhedsnavn eller CVR nummer' value={this.state.cvrnr} onChange={this.update}/>
+              </p>
+              <p className='control'>
+                <button type='submit' className='button is-info'>Søg</button>
+              </p>
             </div>
           </form>
         </div>
       </div>
     )
   }
-
 }

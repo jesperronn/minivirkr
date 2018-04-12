@@ -3,9 +3,20 @@ import logo from './nine_logo_web.svg'
 import './style.css'
 
 const Header = () => (
-  <nav className='navbar navbar-light bg-light'>
-    <a href='#' className='navbar-left'><img src={logo}/></a>
-    <span className='navbar-right'><h4>Mini Virkr Hackaton</h4></span>
+  <nav className='navbar is-primary'>
+    <div className='navbar-brand'>
+      <a href='/' className='navbar-item'>
+          <img src={logo}/>
+      </a>
+    </div>
+    <div className='navbar-menu'>
+      <div className='navbar-end'>
+        <div className='navbar-item is-expanded'>
+          <h4 className='title has-text-white'>Mini Virkr Hackaton</h4>
+        </div>
+      </div>
+    </div>
+
   </nav>
 )
 
