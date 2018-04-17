@@ -56,7 +56,7 @@ If you want to create your own React application, we recommend [create-react-app
 [Sublime Text](https://www.sublimetext.com/3), [Atom](https://atom.io/) and [Visual Studio Code](https://code.visualstudio.com/) are all great editors for developing Javascript applications. So is Intellij IDEA - Use what you prefer.
 
 ### Chrome
-The developer tools in the Chrome editor are superb. You can enhance it by adding [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi).
+The developer tools in the Chrome browser are superb. You can enhance it by adding [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi).
 
 
 ## How to run
