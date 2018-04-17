@@ -18,11 +18,9 @@ export default class MiniVirkr extends React.Component {
       resultat: {},
       fejl: {}
     }
-
-    this.searchCvr = this.searchCvr.bind(this)
   }
 
-  searchCvr(term) {
+  searchCvr = (term) => {
     searchVirkr(term)
     .then(resultat => this.setState({resultat: resultat, fejl: {}}))
     .catch(err => this.setState({resultat: {}, fejl: err}))

@@ -6,18 +6,15 @@ export default class SearchBar extends React.Component {
     this.state = {
       term: ''
     }
-
-    this.update = this.update.bind(this)
-    this.formSubmit = this.formSubmit.bind(this)
   }
 
-  formSubmit(event) {
+  formSubmit = (event) => {
     event.preventDefault()
     // send result upstream
     this.props.submit(this.state.term)
   }
 
-  update(event) {
+  update = (event) => {
     this.setState({term: event.target.value})
   }
 
