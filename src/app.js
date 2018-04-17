@@ -14,12 +14,19 @@ export default class MiniVirkr extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = {
-      resultat: {},
-      fejl: {}
-    }
-
+    this.state = this.defaultState
     this.searchCvr = this.searchCvr.bind(this)
+  }
+
+  // could not use setState call from constructor, so the `defaultState`
+  // is now called from here
+  defaultState = {
+    resultat: {},
+    fejl: {}
+  }
+
+  resetState = () => {
+    this.setState(this.defaultState)
   }
 
   searchCvr(term) {
@@ -31,7 +38,7 @@ export default class MiniVirkr extends React.Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header reset={this.resetState} />
         <div className='container'>
           <SearchBar submit={this.searchCvr}/>
           <Result resultat={this.state.resultat}/>
